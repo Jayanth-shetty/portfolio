@@ -5,7 +5,7 @@ import * as React from "react";
 const WhatsappIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 42 42"
+    viewBox="0 0 36 36"
     aria-hidden="true"
     {...props}
   >

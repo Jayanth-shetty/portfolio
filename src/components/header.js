@@ -30,7 +30,8 @@ export default function Header() {
         <span className="Gspan">JAYANTH</span>
       </Li>
       <MenuBar mobile={visible} />
-      <Li href="https://wa.me/918867094596" target="_blank">
+      <div className={classes.fend}>
+        <Li href="https://wa.me/918867094596" target="_blank">
         <WhatsappIcon className="icon" />
       </Li>
       {!visible && (
@@ -38,6 +39,7 @@ export default function Header() {
           <ListIcon className="icon" />
         </Li>
       )}
+      </div>
       {visible && (
         <div className={classes.nav2} ref={navRef}>
           <MenuBar mobile={visible} />
