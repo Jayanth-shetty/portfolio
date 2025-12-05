@@ -1,0 +1,20 @@
+.li {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 510;
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+  color: rgb(65, 65, 65);
+}
+
+.li:hover {
+  color: #4c1d95;
+}
+
+.active {
+  border: 2px solid rgb(229, 222, 222);
+  color: #4c1d95;
+  padding: 0.4rem;
+  border-radius: 29% 30% 30% 30%;
+  box-shadow: inset 0 0 10px rgba(52, 52, 53, 0.149);
+}
