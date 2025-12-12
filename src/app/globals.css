@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Science+Gothic:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Handjet:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
 @import "tailwindcss";
@@ -30,15 +31,17 @@ body {
 
 .icon {
   margin-top: 0.7rem;
-  fill: #3b3b3b;
+  fill: #161515;
   width: 3rem;
   height: 3rem;
+  transition: transform 0.2s linear;
 }
 
 .icon:hover {
   color: #4c1d95;
   stroke: none;
   fill: #4c1d95;
+  transform: scale(1.13);
 }
 
 .Gspan {
@@ -46,11 +49,14 @@ body {
   font-weight: 510;
   font-style: normal;
 }
-.blob-size{
-  width: 100%;
-  height: 100%;
+
+.blob-size {
+  z-index: -100;
+  width: 110%;
+  height: 110%;
 }
-.blue-btn{
+
+.blue-btn {
   background-color: #4c1d95;
   color: white;
   padding: 0.6rem 2rem;
@@ -58,24 +64,80 @@ body {
   box-shadow: 0 8px 20px rgba(80, 0, 200, 0.25);
   cursor: pointer;
 }
-.black-btn{
-background-color: #272626;
-color: white;
-padding: 0.6rem 2rem;
-border-radius: 12px;
-box-shadow: 0 8px 20px rgba(39, 38, 39, 0.25);
-cursor:pointer;
+
+.black-btn {
+  background-color: #272626;
+  color: white;
+  padding: 0.6rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(39, 38, 39, 0.25);
+  cursor: pointer;
 }
-.blue-btn:hover{
+
+.blue-btn:hover {
   background-color: #260559;
 }
-.black-btn:hover{
+
+.black-btn:hover {
   background-color: #0d0d0d;
 }
-@media (max-width:560px) {
+
+.typing-wrapper {
+  font-size: 4rem; 
+  font-family: "Science Gothic";
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.typing-cursor {
+  display: inline-block;
+  animation: blink 1s steps(2, start) infinite;
+  color: #0f172a;
+  opacity: 0.9;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+@media (max-width:815px) {
+  .typing-wrapper{
+    font-size: 3rem;
+  }
+}
+
+@media (max-width:728px) {
   .icon {
     width: 2.5rem;
     height: 2.5rem;
   }
 
+  .blob-size {
+    width: 45%;
+    height: 45%;
+    transform: translate(70%, -15%);
+  }
+  .typing-wrapper{
+    font-size: 2rem;
+  }
+
 }
+
+@media (max-width:418px) {
+
+  .black-btn,
+  .blue-btn {
+    height: 2.3rem;
+    font-size: smaller;
+  }
+}
+
+@media (max-width:270px) {
+  .typing-wrapper{
+    font-size: 1rem;
+  }
+  
+}
+

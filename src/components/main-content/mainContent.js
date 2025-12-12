@@ -1,17 +1,19 @@
 import Button from "../buttons/button";
+import TypingEffect from "../typingEffect/typing";
 import classes from "./maincontent.module.css";
 import ProfilePicture from "./profile/profilePicture";
 import SvgIcons from "./svgIcons";
-export default function MainContent() {
-  
+export default function MainContent() { 
   return (
     <main className={classes.container}>
       <div className={classes.part1}>
         <div className={classes.selfStart}>
-          <h1>hey i am jayanth</h1>
-          <p>
-            I&apos;m a software developer skilled in front-end,focused on
-            creating dynamic web experiences. Let&apos;s connect and turn your
+          <h1>Hey,I&apos;m Jayanth</h1>
+          <TypingEffect />
+          <h3 className="typing-wrapper">DEVELOPER</h3>
+          <p className={classes.summary}>
+            I&apos;m a software developer skilled in front-end,focused on<br/>
+            creating dynamic web experiences.<br/> Let&apos;s connect and turn your
             ideas into reality!
           </p>
         </div>

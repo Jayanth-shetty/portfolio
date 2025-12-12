@@ -1,32 +1,40 @@
 .container{
-    margin: 2.5%;
+    margin: 1.5%;
     padding: 0.5rem;
-    background-color: red;
-    height: 60vh;
+    height: 70vh;
     width: 90%;
     max-width: 95%;
     display: flex;
     justify-content: space-between;
-    gap: 0.4rem;
 }
 .part1,.part2{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: aliceblue;
     height: 100%;
+    gap: 0.3rem;
 }
 .part1{
     width: 60%;
+    align-items: center;
 }
 .part2{
     width: 40%;
 }
 .selfStart{
-    margin-top: 10%;
+    margin-top: 5%;
     padding: 0.4rem;
     max-height: 60%;
 }
+.summary{
+    margin-top: 2rem;
+    padding: 0.3rem;
+    font-family: "Science Gothic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 260;
+  font-style: normal;
+}
+
 .selfEnd{
     display: flex;
     margin-top: auto;
@@ -47,12 +55,19 @@
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        height: 90vh;
+        height: auto;
         overflow-y: scroll;
     }
     .part1,.part2{
-        width: 90%;
-        max-width: 90%;
+        width: 100%;
+        max-width: 100%;
     }
+    
+}
+@media (max-width:377px) {
+    .part1>.selfEnd{
+        flex-direction: column;
+    align-items: center;
+}
     
 }

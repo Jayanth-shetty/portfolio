@@ -32,16 +32,14 @@ export default function Header() {
       <MenuBar mobile={visible} />
       <div className={classes.fend}>
         <Li href="https://wa.me/918867094596" target="_blank">
-        <WhatsappIcon className="icon" />
-      </Li>
-      {!visible && (
+          <WhatsappIcon className="icon" />
+        </Li>
         <Li onClick={onHandelVisible} className={classes.menuIcon}>
           <ListIcon className="icon" />
         </Li>
-      )}
       </div>
       {visible && (
-        <div className={classes.nav2} ref={navRef}>
+        <div onClick={onHandelVisible} className={classes.nav2} ref={navRef}>
           <MenuBar mobile={visible} />
         </div>
       )}
