@@ -28,19 +28,31 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-
+.IC {
+  margin-top: 0.7rem;
+  fill: #161515;
+  height: 2.5rem;
+  width: auto;
+  transition: transform 0.2s linear;
+}
 .icon {
   margin-top: 0.7rem;
   fill: #161515;
-  width: 3rem;
-  height: 3rem;
+  width: 2.8rem;
+  height: 2.8rem;
   transition: transform 0.2s linear;
+  border-bottom: 5px solid rgba(80, 0, 200, 0.25);
+  border-top: 5px solid rgba(80, 0, 200, 0.25);
+  border-radius: 40%;
+
 }
 
 .icon:hover {
   color: #4c1d95;
   stroke: none;
   fill: #4c1d95;
+  border-top: 0;
+  border-radius: 20%;
   transform: scale(1.13);
 }
 
@@ -110,8 +122,8 @@ body {
 
 @media (max-width:728px) {
   .icon {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.2rem;
+    height: 2.2rem;
   }
 
   .blob-size {

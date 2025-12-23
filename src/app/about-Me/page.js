@@ -1,7 +1,9 @@
+import About from "@/components/about/aboutme";
+
 export default function AboutMe(){
     return(
         <main>
-            <h1>jay</h1>
+            <About/>
         </main>
     )
 }

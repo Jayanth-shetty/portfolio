@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import Li from "./Lists/Li";
 import classes from "./header.module.css";
 import MenuBar from "./Lists/mobileMenu";
-import ListIcon from "@/svgs/List.js";
-import WhatsappIcon from "@/svgs/Whatsapp.js";
+import { IoIosMenu } from 'react-icons/io'
+import { IoLogoWhatsapp } from 'react-icons/io'
 
 export default function Header() {
   const [visible, setVisible] = useState(false);
@@ -32,10 +32,10 @@ export default function Header() {
       <MenuBar mobile={visible} />
       <div className={classes.fend}>
         <Li href="https://wa.me/918867094596" target="_blank">
-          <WhatsappIcon className="icon" />
+          <IoLogoWhatsapp className="IC" />
         </Li>
         <Li onClick={onHandelVisible} className={classes.menuIcon}>
-          <ListIcon className="icon" />
+          <IoIosMenu className="IC" />
         </Li>
       </div>
       {visible && (
