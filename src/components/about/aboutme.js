@@ -1,37 +1,38 @@
-"use client"
+"use client";
+import { delay, motion } from "framer-motion";
 import Certifications from "./certifications";
-import ReactImg from './certify/React.jpg';
-import ForgeImg from './certify/forge.jpg';
-import GenAiImg from './certify/GenAi.jpg';
+import ReactImg from "./certify/React.jpg";
+import ForgeImg from "./certify/forge.jpg";
+import GenAiImg from "./certify/GenAi.jpg";
 import DragDrop from "./dragdrop";
 const me = {
   about: [
     "ABOUT ME",
     "Hi, I'm Jayanth B. A React developer with hands-on project experience, specializing in building dynamic and responsive web applications. I focus on front-end development to create seamless user experiences and solve real-world problems. I’m passionate about continuous learning and enjoy collaborating with teams to turn ideas into impactful solutions.",
     "Skills:",
-    "certifications:"
+    "certifications:",
   ],
   certifications: [
     {
       title: "React Developer Certification",
-      image:ReactImg,
+      image: ReactImg,
       issuer: "Udemy",
       year: "2025",
-      url:"https://udemy-certificate.s3.amazonaws.com/image/UC-ff6e35d1-e57c-4268-971f-ef5ce5d9cf8c.jpg",
+      url: "https://udemy-certificate.s3.amazonaws.com/image/UC-ff6e35d1-e57c-4268-971f-ef5ce5d9cf8c.jpg",
     },
     {
       title: "Frontend Web Development",
-      image:ForgeImg,
+      image: ForgeImg,
       issuer: "Skyscanner",
       year: "2025",
-      url:"https://www.theforage.com/completion-certificates/skoQmxqhtgWmKv2pm/km4rw7dihDr3etqom_skoQmxqhtgWmKv2pm_LQ5TKvjw6gdRnmu9q_1756799111514_completion_certificate.pdf"
+      url: "https://www.theforage.com/completion-certificates/skoQmxqhtgWmKv2pm/km4rw7dihDr3etqom_skoQmxqhtgWmKv2pm_LQ5TKvjw6gdRnmu9q_1756799111514_completion_certificate.pdf",
     },
     {
       title: "Generative Ai",
-      image:GenAiImg,
+      image: GenAiImg,
       issuer: "Nxt wave",
-      url:"https://www.theforage.com/completion-certificates/skoQmxqhtgWmKv2pm/km4rw7dihDr3etqom_skoQmxqhtgWmKv2pm_LQ5TKvjw6gdRnmu9q_1756799111514_completion_certificate.pdf",
-      year: "2023",
+      year: "2025",
+      url: "https://ibb.co/XxZ5Td6N",
     },
   ],
 };
@@ -51,7 +52,14 @@ export default function About() {
         <DragDrop />
       </div>
       <h1 className="text-3xl mt-3 mb-7 self-start font-bold">{me.about[3]}</h1>
-      <Certifications arr={me.certifications} />
+      <motion.div
+        className="flex flex-wrap gap-5 mb-28 items-center justify-center w-full"
+        initial={{opacity:0,y:30}}
+        whileInView={{opacity:1,y:0}}
+        viewport={{amount:0.3}}
+      >
+        <Certifications arr={me.certifications} />
+      </motion.div>
     </div>
   );
 }

@@ -3,15 +3,17 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FaCircleArrowRight } from "react-icons/fa6";
+
 export default function Certifications({ arr }) {
   return (
-    <div className="flex flex-wrap gap-5 mb-28 items-center justify-center w-full">
+    <>
       {arr.map((text, i) => (
-        <Link key={i} href={text.url} target="_blank" className="bg-white rounded-2xl h-70 sm:w-1/3 lg:w-1/4 w-full relative overflow-hidden border border-gray-100 shadow-[0_20px_40px_-12px_rgba(0,0,0,0.15)] transition-all duration-300 hover:-translate-y-2"><motion.div
+        <motion.div
           key={i}
-          // className="bg-white rounded-2xl h-70 sm:w-1/3 lg:w-1/4 w-full relative overflow-hidden border border-gray-100 shadow-[0_20px_40px_-12px_rgba(0,0,0,0.15)] transition-all duration-300 hover:-translate-y-2"
+          className="bg-white rounded-2xl h-70 sm:w-1/3 lg:w-1/4 w-full relative overflow-hidden border border-gray-100 shadow-[0_20px_40px_-12px_rgba(0,0,0,0.15)] transition-all duration-300 hover:-translate-y-2"
           initial="rest"
-          animate="anime"
+          whileInView="anime"
+          viewport={{ amount: 0.4 }}
           whileHover="hover"
         >
           <motion.div
@@ -25,7 +27,7 @@ export default function Certifications({ arr }) {
               ease: "easeInOut",
             }}
             className="absolute z-1 top-4 right-4 w-6 h-6 bg-gray-900 rounded-full origin-center"
-          />
+          /><Link key={i} href={text.url} target="_blank">
           <div className="ml-7 bottom-1.5 relative z-30 text-black">
             <span className="flex flex-row-reverse p-5 text-purple-100 hover:text-purple-300">
               <FaCircleArrowRight size={22} />
@@ -35,10 +37,10 @@ export default function Certifications({ arr }) {
             <h2>{text.issuer}</h2>
             <p>{text.year}</p>
           </div>
+          </Link>
         </motion.div>
-        </Link> 
       ))}
-    </div>
+    </>
 
   );
 }
