@@ -27,7 +27,7 @@ export default function ProjectsCollection() {
       }}
       className="flex min-h-screen items-center justify-center overflow-hidden bg-neutral-900"
     >
-      <div className="relative mx-auto flex max-w-4xl flex-col gap-5 sm:py-40">
+      <div className="relative mx-auto flex max-w-4xl flex-col gap-5 py-20 sm:py-40">
         {projectList.map((project) => (
           <Card key={project.id} project={project} color={textColor} />
         ))}

@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import Li from "./Lists/Li";
 import classes from "./header.module.css";
 import MenuBar from "./Lists/mobileMenu";
-import { IoIosMenu } from 'react-icons/io'
-import { IoLogoWhatsapp } from 'react-icons/io'
+import { IoIosMenu } from "react-icons/io";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 export default function Header() {
   const [visible, setVisible] = useState(false);

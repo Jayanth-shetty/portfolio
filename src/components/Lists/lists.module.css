@@ -4,6 +4,7 @@
   text-decoration: none;
   list-style: none;
   cursor: pointer;
+  position: relative;
   color: rgb(65, 65, 65);
 }
 
@@ -11,10 +12,21 @@
   color: #4c1d95;
 }
 
+.link {
+  position: relative;
+  z-index: 2;
+}
+
 .active {
-  border: 2px solid rgb(229, 222, 222);
   color: #4c1d95;
-  padding: 0.4rem;
-  border-radius: 29% 30% 30% 30%;
-  box-shadow: inset 0 0 10px rgba(52, 52, 53, 0.149);
+}
+
+.activeBlob {
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+  left: 0;
+  height: 3px;
+  border-radius: 999px;
+  background: #4c1d95;
 }

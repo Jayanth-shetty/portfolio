@@ -28,6 +28,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .IC {
   margin-top: 0.7rem;
   fill: #161515;
@@ -35,13 +36,14 @@ body {
   width: auto;
   transition: transform 0.2s linear;
 }
+
 .icon {
   margin-top: 0.7rem;
   fill: #161515;
   width: 2.8rem;
   height: 2.8rem;
   transition: transform 0.2s linear;
-  border-bottom: 5px solid rgba(80, 0, 200, 0.25);
+  border-bottom: 5px solid #7b2cbf;
   border-top: 5px solid rgba(80, 0, 200, 0.25);
   border-radius: 40%;
 
@@ -50,9 +52,9 @@ body {
 .icon:hover {
   color: #4c1d95;
   stroke: none;
-  fill: #4c1d95;
+  fill: #7b2cbf;
   border-top: 0;
-  border-radius: 20%;
+  border-radius: 40%;
   transform: scale(1.13);
 }
 
@@ -95,7 +97,7 @@ body {
 }
 
 .typing-wrapper {
-  font-size: 4rem; 
+  font-size: 4rem;
   font-family: "Science Gothic";
   font-optical-sizing: auto;
   font-weight: 600;
@@ -114,8 +116,9 @@ body {
     visibility: hidden;
   }
 }
+
 @media (max-width:815px) {
-  .typing-wrapper{
+  .typing-wrapper {
     font-size: 3rem;
   }
 }
@@ -131,7 +134,8 @@ body {
     height: 45%;
     transform: translate(70%, -15%);
   }
-  .typing-wrapper{
+
+  .typing-wrapper {
     font-size: 2rem;
   }
 
@@ -147,9 +151,8 @@ body {
 }
 
 @media (max-width:270px) {
-  .typing-wrapper{
+  .typing-wrapper {
     font-size: 1rem;
   }
-  
-}
 
+}
