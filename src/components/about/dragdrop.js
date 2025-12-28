@@ -9,22 +9,22 @@ import { SiTailwindcss } from "react-icons/si";
 import { IoLogoCss3 } from "react-icons/io";
 export default function DragDrop() {
   const icons = [
-  { Icon: DiReact,        x: 80,  y: 50, duration: 16 },
-  { Icon: DiGithubBadge, x: -70, y: -10, duration: 18 },
-  { Icon: DiHtml5,       x: 60,  y: 30,  duration: 10 },
-  { Icon: DiJsBadge,     x: -50, y: 70,  duration: 26 },
-  { Icon: DiMongodb,     x: 40,  y: 30, duration: 18 },
-  { Icon: SiTailwindcss, x: -60, y: -15, duration: 18 },
-  { Icon: IoLogoCss3,    x: 40,  y: -30, duration: 28 },
-];
+    { Icon: DiReact, x: 80, y: 50, duration: 16, title: "react" },
+    { Icon: DiGithubBadge, x: -70, y: -10, duration: 18, title: "Github" },
+    { Icon: DiHtml5, x: 60, y: 30, duration: 10, title: "Html5" },
+    { Icon: DiJsBadge, x: -50, y: 70, duration: 26, title: "JavaScript" },
+    { Icon: DiMongodb, x: 40, y: 30, duration: 18, title: "MongoDB" },
+    { Icon: SiTailwindcss, x: -60, y: -15, duration: 18, title: "TailwindCss" },
+    { Icon: IoLogoCss3, x: 40, y: -30, duration: 28, title: "Css3" },
+  ];
 
   return (
     <>
-      {icons.map(({ Icon, x, y, duration }, i) => (
+      {icons.map(({ Icon, x, y, duration, title }, i) => (
         <motion.div
           key={i}
-          className="flex gap-2 h-min mt-2.5 cursor-grab bg-black text-[0.7rem] text-white max-w-fit rounded-b-xl rounded-t-xl p-1 pl-2 pr-3 sm:text-[1rem]"
-          animate={{ x: [0,x, 0], y: [0, y, 0] }}
+          className="mt-2.5 flex h-min max-w-fit cursor-grab gap-2 rounded-t-xl rounded-b-xl bg-black p-1 pr-3 pl-2 text-[0.7rem] text-white sm:text-[1rem]"
+          animate={{ x: [0, x, 0], y: [0, y, 0] }}
           transition={{
             duration,
             repeat: Infinity,
@@ -38,8 +38,8 @@ export default function DragDrop() {
             right: 30,
           }}
         >
-          <Icon key={i} className=" text-[1rem] sm:text-2xl" />
-          {Icon.name.replace(/^Di|^Si|^IoLogo/, "").replace("Badge", "")}
+          <Icon key={i} className="text-[1rem] sm:text-2xl" />
+          {title}
         </motion.div>
       ))}
     </>
