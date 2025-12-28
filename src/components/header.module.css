@@ -6,7 +6,10 @@
   width: 100%;
   height: 4rem;
   padding: 0.1rem;
-  background-color: white;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   border: 1px solid rgb(224, 219, 219);
   z-index: 100;
   position: fixed;
@@ -21,7 +24,7 @@
   justify-content: space-evenly;
 }
 
-.fend{
+.fend {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
@@ -54,6 +57,7 @@
   .menuIcon {
     display: block;
   }
+
   .mobileUl {
     display: flex;
     justify-content: space-around;
@@ -62,7 +66,8 @@
     gap: 0.8rem;
     padding: 0.7rem;
   }
-  .nav2{
+
+  .nav2 {
     z-index: 100;
   }
 

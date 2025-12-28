@@ -1,7 +1,6 @@
-export default function Project(){
-    return(
-        <main>
-            <h1>Project</h1>
-        </main>
-    )
+import ProjectsCollection from "@/components/project/project";
+import Projects from "@/components/project/project";
+
+export default function Project() {
+  return <ProjectsCollection />;
 }
