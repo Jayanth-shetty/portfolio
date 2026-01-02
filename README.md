@@ -20,8 +20,8 @@ Built with performance, accessibility, and beautiful UI animations in mind.
 
 ## 🌐 Live Demo
 
-👉 **Live Site:** https://your-portfolio-link  
-👉 **GitHub Repo:** https://github.com/yourname/portfolio
+👉 **Live Site:** https://portfolio-gamma-weld-33.vercel.app/  
+👉 **GitHub Repo:** https://github.com/Jayanth-shetty
 
 > ✨ Hosted on Vercel for blazing fast performance.
 
