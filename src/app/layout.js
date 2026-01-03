@@ -8,7 +8,7 @@ export const metadata = {
     "Portfolio of Jayanth BB – Frontend Developer specializing in React.js and Next.js. Explore projects, skills, and contact information.",
   keywords: [
     "Jayanth BB",
-    "jayanth b portfolio"
+    "jayanth b portfolio",
     "Jayanth portfolio",
     "frontend developer",
     "react developer",
