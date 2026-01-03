@@ -8,6 +8,7 @@ export const metadata = {
     "Portfolio of Jayanth BB – Frontend Developer specializing in React.js and Next.js. Explore projects, skills, and contact information.",
   keywords: [
     "Jayanth BB",
+    "jayanth b portfolio"
     "Jayanth portfolio",
     "frontend developer",
     "react developer",
@@ -17,13 +18,13 @@ export const metadata = {
   ],
   authors: [{ name: "Jayanth BB" }],
   creator: "Jayanth BB",
-  metadataBase: new URL("https://your-portfolio-domain.com"),
+  metadataBase: new URL("https://portfolio-gamma-weld-33.vercel.app"),
   openGraph: {
     title: "Jayanth BB – Frontend Developer Portfolio",
     description:
       "Frontend Developer specializing in React.js and Next.js. View my projects and experience.",
-    url: "https://your-portfolio-domain.com",
-    siteName: "Jayanth Portfolio",
+    url: "https://portfolio-gamma-weld-33.vercel.app",
+    siteName: "Jayanth B Portfolio",
     images: [
       {
         url: "/og-image.png",
